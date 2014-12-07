@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xs:schema 
+  targetNamespace="http://hardcode.nl/blip/"
+  xmlns:hc="http://hardcode.nl/blip/" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="article">
+    <xs:complexType>
+        <xs:sequence>
+           <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+           <xs:element name="category" minOccurs="1" maxOccurs="1"/>
+           <xs:element name="content">
+              <xs:complexType>
+                  <xs:choice minOccurs="1" maxOccurs="unbounded">
+                     <xs:element name="html" type="xs:string"/>
+                     <xs:element name="code" type="xs:string"/>
+                  </xs:choice>
+              </xs:complexType>
+           </xs:element>
+           <xs:element name="tag" minOccurs="0" maxOccurs="unbounded" />
+           <xs:element ref="hc:comment" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="comment">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="hc:comment" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+</xs:schema>
+

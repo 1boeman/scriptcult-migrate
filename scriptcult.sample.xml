@@ -1,0 +1,21 @@
+<hc:article xmlns:hc="http://hardcode.nl/blip/">
+  <title>XSDTest test</title>
+  <category>bla</category> 
+  <content>
+      <html><![CDATA[ blabla ]]></html>
+      <code><![CDATA[ blabla ]]></code>
+      <html><![CDATA[ blabla ]]></html>
+      <code><![CDATA[ blabla ]]></code>
+    </content>
+    <tag>bla</tag>
+    <tag>bla</tag>
+    <hc:comment><![CDATA[ blabla ]]></hc:comment>
+    <hc:comment><![CDATA[ blabla ]]>
+        <hc:comment><![CDATA[ blabla ]]></hc:comment>
+    </hc:comment>
+
+</hc:article>
+
+
+
+
